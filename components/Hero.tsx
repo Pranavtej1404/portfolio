@@ -50,7 +50,7 @@ export default function Hero() {
           <SiGmail />
         </a>
         <a
-          href="https://www.linkedin.com/in/npranavtej"
+          href="https://www.linkedin.com/in/n-pranav-tej-933777250"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-600"
