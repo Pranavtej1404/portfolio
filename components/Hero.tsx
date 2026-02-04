@@ -4,9 +4,10 @@ import { SiGmail } from "react-icons/si";
 import { SiHackerrank } from 'react-icons/si'
 import { AiFillGithub } from "react-icons/ai";
 import { PiMouseScrollBold } from "react-icons/pi";
+import profilePic from './ProfilePic.png'
 
 export default function Hero() {
-  const birthDate = new Date(2004, 10, 12); 
+  const birthDate = new Date(2004, 10, 12);
   const today = new Date();
 
   let years = today.getFullYear() - birthDate.getFullYear();
@@ -15,19 +16,19 @@ export default function Hero() {
 
   if (days < 0) {
     months--;
-    
+
   }
   if (months < 0) {
     years--;
-    
+
   }
 
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center space-y-4">
       <div className="flex justify-center">
         <Image
-          src="/pranav.jpg"
-          alt="N Pranav Tej"
+          src={profilePic}
+          alt="N PRANAV TEJ"
           width={120}
           height={120}
           className="rounded-full border-4 border-blue-500 shadow-lg"
@@ -35,7 +36,8 @@ export default function Hero() {
       </div>
 
       <h1 className="text-3xl md:text-4xl font-bold">
-  Hi, Pranav here <span className="inline-block animate-wave"></span></h1>
+        Hi, I'm N PRANAV TEJ <span className="inline-block animate-wave">👋</span>
+      </h1>
 
       <p className="text-lg text-gray-700">
         {`${years} year old Fullstack Developer, GenAI Enthusiast, and a CS Student `}
@@ -66,7 +68,7 @@ export default function Hero() {
         >
           <SiHackerrank />
         </a>
-         <a
+        <a
           href="https://github.com/Pranavtej1404"
           target="_blank"
           rel="noopener noreferrer"
@@ -76,8 +78,8 @@ export default function Hero() {
         </a>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-      <PiMouseScrollBold className="text-3xl text-gray-400 animate-bounce" />
-    </div>
+        <PiMouseScrollBold className="text-3xl text-gray-400 animate-bounce" />
+      </div>
     </section>
   )
 }

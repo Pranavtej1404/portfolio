@@ -12,21 +12,21 @@ const SkillGroup = ({
   color?: string
 }) => (
   <div>
-  <h3 className="flex items-center gap-2 text-xl font-semibold mb-4">
-    <span className={color ? color : ""} aria-hidden="true">{icon}</span>
-    <span>{title}</span>
-  </h3>
-  <div className="flex flex-wrap gap-3">
-    {skills.map((skill, index) => (
-      <span
-        key={index}
-        className="bg-gray-400 px-3 py-1 rounded-xl text-sm text-gray-800 border hover:bg-gray-300 transition-colors cursor-pointer"
-      >
-        {skill}
-      </span>
-    ))}
+    <h3 className="flex items-center gap-2 text-xl font-semibold mb-4">
+      <span className={color ? color : ""} aria-hidden="true">{icon}</span>
+      <span>{title}</span>
+    </h3>
+    <div className="flex flex-wrap gap-3">
+      {skills.map((skill, index) => (
+        <span
+          key={index}
+          className="bg-gray-400 px-3 py-1 rounded-xl text-sm text-gray-800 border hover:bg-gray-300 transition-colors cursor-pointer"
+        >
+          {skill}
+        </span>
+      ))}
+    </div>
   </div>
-</div>
 )
 
 export default function Skills() {
@@ -36,58 +36,58 @@ export default function Skills() {
 
       <div className="grid md:grid-cols-2 gap-8">
         <SkillGroup
-          title="Programming & Web Technologies"
+          title="Programming & Core CS"
           icon={<FaCode />}
           color="text-blue-600"
           skills={[
-            'JavaScript',
             'Java',
             'Python',
-            'C++',
-            'HTML5',
-            'CSS3',
-            'JSON',
-            'REST APIs',
-            'Next.js',
-            'React.js',
-            'Spring Boot',
+            'JavaScript (ES6+)',
+            'TypeScript',
+            'DSA',
+            'OOP',
+            'Design Patterns',
           ]}
         />
         <SkillGroup
-          title="AI & Machine Learning"
-          icon={<FaRobot />}
+          title="Backend & Databases"
+          icon={<FaTools />}
           color="text-purple-600"
           skills={[
-            'Neural Networks (Learning)',
-            'scikit-learn',
-            'TensorFlow (Basic)',
-            'LLMs & GenAI (Exploring)',
+            'Spring Boot',
+            'FastAPI',
+            'Node.js',
+            'RESTful APIs',
+            'MySQL',
+            'PostgreSQL',
+            'MongoDB',
+            'Redis',
           ]}
         />
         <SkillGroup
-          title="Tools & Platforms"
-          icon={<FaCloud />}
+          title="Frontend & UI"
+          icon={<FaCode />}
           color="text-green-600"
           skills={[
-            'Git',
-            'GitHub',
-            'VS Code',
-            'Postman',
-            'Linux (Basic CLI)',
-            'Render',
-            'Vercel',
+            'Next.js',
+            'React.js',
+            'Tailwind CSS',
+            'HTML5',
+            'CSS3',
           ]}
         />
         <SkillGroup
-          title="Soft Skills"
-          icon={<FaTools />}
+          title="Tools & Development"
+          icon={<FaCloud />}
           color="text-yellow-600"
           skills={[
-            'Problem Solving',
-            'Debugging',
-            'Team Collaboration',
-            'Communication',
-            'Project Ownership',
+            'Git & GitHub',
+            'Docker',
+            'CI/CD Pipelines',
+            'Agile/Scrum',
+            'Unit Testing',
+            'Windows OS',
+            'Postman',
           ]}
         />
       </div>
